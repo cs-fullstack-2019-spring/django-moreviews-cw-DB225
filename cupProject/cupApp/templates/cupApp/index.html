@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--allPurchaseTimes / after2012-->
+<h1>Didier</h1>
+<ul>
+    {% if allPurchaseTimes %}
+    {% for eachCup in allPurchaseTimes %}
+    <li>{{ eachCup.name }}</li>
+    {% endfor %}
+    {% else %}
+    <p>Something happened.</p>
+    {% endif %}
+</ul>
+
+<h1>Here are all of the cups manufactured after 2012</h1>
+
+<ul>
+    {% if after2012 %}
+    {% for eachCup in after2012 %}
+    <li>{{ eachCup.name }}</li>
+    {% endfor %}
+    {% else %}
+    <p>Something happened.</p>
+    {% endif %}
+</ul>
+</body>
+</html>
